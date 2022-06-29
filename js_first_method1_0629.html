@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery初次練習</title>
+</head>
+<body>
+
+
+    <button type="button" id="myBtn">myBtn</button>
+    <button type="button" id="addBtn">addBtn</button>
+    <hr>
+
+    <div id="div1">
+        <p id="myP">0629教一下jquery--start 呵呵</p>
+    </div>
+
+    <!--jquery init-->
+    <!--jquery note-->
+
+    <!--jquery引入include-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--開始寫jquery--->
+    <script>
+        //jquery前面要有dollar_sign$
+       
+       
+        //方法一 hello jquery
+        $(document).ready(function(){
+            alert('hello jquery');
+
+        });
+
+
+        // 方法二
+        // $().ready(function(){
+        //     alert('hello jquery');
+        // });
+        //方法二有後續延申,請看js_first_method2_0629.html
+        
+        // 方法三-1---jquery
+        //$(function(){
+        //    alert('hello jquery');
+        //});
+
+        // 方法三-2
+        $(function () {
+
+        // js寫法
+        // const myID = document.getElementById('myBtn');
+        const myPByJs = document.getElementById('myP');
+
+        // jquery寫法
+        $('#myP').text('hello jquery ppp');
+        let myP = $('#myP');
+        console.log('myPByJs', myPByJs);
+        console.log('myP', myP);
+
+        
+        });
+
+        //如果只用到原js那放在外部可以
+        //但如果有用到jquery的話 js要放在內
+
+        //練習一
+        //myBtn click
+        //myP text change text ok
+        //myP text on click event myP text change text ok
+
+
+        //myBtn --- myP text change ok
+        $countNum = 0;
+        $('#myBtn').on('click',function()  {
+            console.log('mybtn ok');
+            $countNum += 1;
+            //$(#myP).text('myP text change ok');
+            $('myp').text(`myP text change text ok => ${$countNum}`);
+        });
+
+
+        //myBtn --- on click event myP text change text ok
+        //$('#myBtn').click(function()) {
+        //    console.log ('mybtn ok');
+        //    $('#myp').text('on click event myP text change text ok');
+        //}
+
+        //練習二
+        //myBtn click 
+        //myP text change text ok =>1
+        //myP text change text ok =>2
+        //myP text change text ok =>3
+        //myBtn text change ==>加上 $countNum
+        //設一$countNum變數
+        //每按btn一次就會出來text
+
+
+        //練習三
+        // addBtn click
+        // addP ok countAdd => 1
+        // addP ok countAdd => 2
+        // addP ok countAdd => 3
+
+
+
+        //關於 jquery方法二和三_完整詳細放在其他html檔案
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
