@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divBtn,.divContent{
+            text-align: center;
+            padding: 20px;
+            border: solid 1px black;
+            background-color: lightskyblue;
+        }
+        
+        .divContent{
+            background-color: lightslategray;
+            display: none;
+        }
+        #myBtn{
+            position: fixed;
+            right: 10px;
+            top: 0;
+            text-align: right;
+            color: red;
+            border: solid 1px black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="myBtn" type="button">open all</button>
+    <!--提醒若有要多個標籤設定的話請設定class,但如果只針對單一請用id下去設定-->
+    <!--再次提醒注意,如果是是用div class=""請在style上寫.name{},但如果是id=""請在style寫#name{},如果是一個標籤就給他一個標籤-->
+    <!--如果是一個標籤就給他一個標籤例如說a標籤 就會寫成:"a"==>變成這樣-->
+    <!--jquey寫法首要條件要記住:-->
+    <!--$("#css選擇器")-->
+    <!--$("")===>通常都會是長成這樣前面一個錢字符號後面一個括號和雙引號給他,中間就是塞你要塞的選擇器-->
+    <!--$("")===>通常這後面最基本的後面例如說會加一個.click(function())-->
+    <div class="divBtn">
+        景點一
+    </div>
+    <div class="divContent">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fuga dolore illo reprehenderit porro
+        doloremque repellendus, minus accusantium tenetur molestiae repellat harum numquam animi eligendi cum veritatis
+        debitis, ipsa deserunt ut sequi nisi quia a adipisci. Omnis labore, error, ipsa aperiam nostrum expedita aliquam
+        dolorum reprehenderit ducimus laborum, nesciunt ad rem fuga delectus. Natus at pariatur, repellendus eum ratione
+        dignissimos nobis corrupti quia veniam eos quisquam reiciendis debitis quclassem rerum quo alias voluptas aliquclass
+        beatae non sed culpa atque laboriosam? Quam omnis sapiente odit, consequatur deleniti, harum enim tenetur,
+        molestiae velit laboriosam hic numquam. Consectetur at vero quasi facere in asperiores delectus? Magni
+        aspernatur enim doloremque temporibus nemo. Reiciendis dicta odio laboriosam a, eos quo. Ducimus ullam,
+        similique quibusdam mollitia quaerat voluptate nihil culpa sapiente fuga quae quia laudantium veritatis
+        consectetur iure? Sequi facere, doloremque optio est itaque nesciunt nobis at eligendi aperiam porro consequatur
+        ipsa animi obcaecati doloribus perspiciatis reiciendis officiis velit a enim officia voluptatum placeat ex
+        tempora! Quclassem vel rem at nihil mollitia consequatur iusto et molestias provident vero dolorum minus excepturi
+        aut ab nulla quibusdam non voluptates, beatae nemo dolor magnam illum. Laudantium sint a tenetur debitis hic
+        quas, dolorum itaque. Dolore expedita rerum magni at.
+    </div>
+
+    <div class="divBtn">
+        景點二
+    </div>
+
+    <div class="divContent">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fuga dolore illo reprehenderit porro
+        doloremque repellendus, minus accusantium tenetur molestiae repellat harum numquam animi eligendi cum veritatis
+        debitis, ipsa deserunt ut sequi nisi quia a adipisci. Omnis labore, error, ipsa aperiam nostrum expedita aliquam
+        dolorum reprehenderit ducimus laborum, nesciunt ad rem fuga delectus. Natus at pariatur, repellendus eum ratione
+        dignissimos nobis corrupti quia veniam eos quisquam reiciendis debitis quidem rerum quo alias voluptas aliquid
+        beatae non sed culpa atque laboriosam? Quam omnis sapiente odit, consequatur deleniti, harum enim tenetur,
+        molestiae velit laboriosam hic numquam. Consectetur at vero quasi facere in asperiores delectus? Magni
+        aspernatur enim doloremque temporibus nemo. Reiciendis dicta odio laboriosam a, eos quo. Ducimus ullam,
+        similique quibusdam mollitia quaerat voluptate nihil culpa sapiente fuga quae quia laudantium veritatis
+        consectetur iure? Sequi facere, doloremque optio est itaque nesciunt nobis at eligendi aperiam porro consequatur
+        ipsa animi obcaecati doloribus perspiciatis reiciendis officiis velit a enim officia voluptatum placeat ex
+        tempora! Quidem vel rem at nihil mollitia consequatur iusto et molestias provident vero dolorum minus excepturi
+        aut ab nulla quibusdam non voluptates, beatae nemo dolor magnam illum. Laudantium sint a tenetur debitis hic
+        quas, dolorum itaque. Dolore expedita rerum magni at.
+    </div>
+
+    <div class="divBtn">
+        景點三
+    </div>
+
+    <div class="divContent">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione fuga dolore illo reprehenderit porro
+        doloremque repellendus, minus accusantium tenetur molestiae repellat harum numquam animi eligendi cum veritatis
+        debitis, ipsa deserunt ut sequi nisi quia a adipisci. Omnis labore, error, ipsa aperiam nostrum expedita aliquam
+        dolorum reprehenderit ducimus laborum, nesciunt ad rem fuga delectus. Natus at pariatur, repellendus eum ratione
+        dignissimos nobis corrupti quia veniam eos quisquam reiciendis debitis quidem rerum quo alias voluptas aliquid
+        beatae non sed culpa atque laboriosam? Quam omnis sapiente odit, consequatur deleniti, harum enim tenetur,
+        molestiae velit laboriosam hic numquam. Consectetur at vero quasi facere in asperiores delectus? Magni
+        aspernatur enim doloremque temporibus nemo. Reiciendis dicta odio laboriosam a, eos quo. Ducimus ullam,
+        similique quibusdam mollitia quaerat voluptate nihil culpa sapiente fuga quae quia laudantium veritatis
+        consectetur iure? Sequi facere, doloremque optio est itaque nesciunt nobis at eligendi aperiam porro consequatur
+        ipsa animi obcaecati doloribus perspiciatis reiciendis officiis velit a enim officia voluptatum placeat ex
+        tempora! Quidem vel rem at nihil mollitia consequatur iusto et molestias provident vero dolorum minus excepturi
+        aut ab nulla quibusdam non voluptates, beatae nemo dolor magnam illum. Laudantium sint a tenetur debitis hic
+        quas, dolorum itaque. Dolore expedita rerum magni at.
+    </div>
+
+    <!--jquery要寫的時候 記得一定要先引入jquery進來,要使用jquery之前必須要把jquery整個檔案先引入放進vscode-->
+    <!--像是這樣寫也可以-->
+    <!--或是直接去google cdn也可-->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 開始寫jquery -->
+    <!--jquery常用多載:overload-->
+    <script>
+        $(document).ready(function(){
+            // $('#divBtn').click(function(){
+            //     console.log(this);
+            //     $('#divContent').slideToggle();
+
+            // });
+
+            // 練習一
+            $('.divBtn').click(function(){
+                console.log(this);
+                // $('.divContent').slideToggle();
+                $(this).next().slideToggle();
+                $('#myBtn').text('close all');
+
+            });
+
+            // 練習二
+            // 最上方增加一個div全部都縮起來
+            $('#myBtn').click(function(){
+                console.log('myBtn click');
+                $('.divContent').slideUp();
+                $('#myBtn').text('open all');
+
+            });
+            
+
+            // 練習三
+            // 原本open all -> 點過div -> close all        
+
+        });
+
+    </script>
+</body>
+
+</html>

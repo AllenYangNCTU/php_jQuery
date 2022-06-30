@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divBtn,
+        .divContent {
+            text-align: center;
+            padding: 20px;
+            border: solid 1px black;
+            background-color: lightskyblue;
+        }
+
+        .divContent {
+            background-color: lightslategray;
+            display: none;
+        }
+
+        #myBtn {
+            position: fixed;
+            right: 10px;
+            top: 0;
+            text-align: right;
+            color: red;
+            border: solid 1px black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="myBtn" type="button">open all</button>
+
+    <div class="divBtn">
+        景點一
+    </div>
+
+    <div class="divContent">
+        <h3>迪士尼樂園</h3>
+        <img src="https://picsum.photos/id/1001/400/300">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <button type="">折扣報名</button>
+    </div>
+
+    <div class="divBtn">
+        景點二
+    </div>
+
+    <div class="divContent">
+        <h3>迪士尼樂園</h3>
+        <img src="https://picsum.photos/id/1002/400/300">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <button type="">折扣報名</button>
+    </div>
+
+    <div class="divBtn">
+        景點三
+    </div>
+
+    <div class="divContent">
+        <h3>迪士尼樂園</h3>
+        <img src="https://picsum.photos/id/1003/400/300">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <button type="">折扣報名</button>
+    </div>
+
+
+    <!--1.先引入jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 2. 開始寫jquery -->
+    <script>
+        $(document).ready(function () {
+            // $('#divBtn').click(function(){
+            //     console.log(this);
+            //     $('#divContent').slideToggle();
+
+            // });
+            let divFlag = 0;
+
+            // 練習一
+            $('.divBtn').click(function () {
+                console.log(this);
+                // $('.divContent').slideToggle();
+                $(this).next().slideToggle();
+                $('#myBtn').text('close all');
+
+            });
+
+            // 練習二
+            // 最上方增加一個div全部都縮起來
+            $('#myBtn').click(function () {
+                console.log('myBtn click');
+                // 方法一
+                let allContent = $('.divContent').is(":visible"); //抓class 是否可以顯示
+                if (!allContent) {
+                    $('.divContent').slideDown();
+                    $('#myBtn').text('close all');
+                } else {
+                    $('.divContent').slideUp();
+                    $('#myBtn').text('open all');
+                }
+
+                // $('.divContent').slideUp();
+                // $('#myBtn').text('open all');
+
+                // 方法二 flag
+                // divFlag = 0; close//
+                // divFlag = 1; open
+
+            });
+
+
+            // 練習三
+            // 原本open all -> 點過div -> close all        
+
+            // 練習四
+            // 
+
+        });
+
+    </script>
+
+</body>
+</html>

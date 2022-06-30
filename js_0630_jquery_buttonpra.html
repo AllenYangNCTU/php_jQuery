@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery_隱藏/顯示_測試-button</title>
+
+</head>
+
+<body>
+    <!--通常在寫整個jquery時候-->
+    <!--會上面是html語法-->
+    <!--下面開始才是script開始-->
+    <!--不知道是this還是object this時-->
+    <!--請記得去cosole.log一下-->
+    <h3>jquery_隱藏/顯示_測試-button</h3>
+
+    <p id="blue">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem temporibus distinctio, unde doloribus
+        ex similique doloremque. Molestias voluptate deleniti unde?</p>
+
+    <p id="red">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem temporibus distinctio, unde doloribus
+            ex similique doloremque. Molestias voluptate deleniti unde?</p>
+
+    <p class="myP">Lorem ipsum dolor sit amet.</p>
+    <p class="myP">Lorem ipsum dolor sit amet.</p>
+    <p class="myP">Lorem ipsum dolor sit amet.</p>
+    <p class="myP">Lorem ipsum dolor sit amet.</p>
+    <p class="myP">Lorem ipsum dolor sit amet.</p>
+
+    <hr>
+     <!--顯示隱藏及切換按鈕區塊-->
+     <button id="hideBtn" type="button">hideBtn</button>      
+     <button id="showBtn" type="button">showBtn</button>      
+     <button id="toggleBtn" type="button">toggleBtn</button>      
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 開始寫jquery -->
+    <script>
+        $(document).ready(function () {
+            $('#blue').css('color',"blue");
+            $('#red').css('color',"red");
+
+            $('#hideBtn').click(function(){
+                $('p').hide();
+            });
+            $('#showBtn').click(function(){
+                $('p').show();
+            });
+            $('#toggleBtn').click(function(){
+                $('p').toggle();
+            });
+            $('p').click(function(){
+                $(this).hide();
+            });
+
+            let allMyP = $('.myP').each(function(index,element){
+                console.log(this);
+                let oldText = $(this).text();
+                $(this).text(`${index+1} ${oldText}`);
+            });
+            console.log(allMyP);
+
+            // 練習一
+            // hide show toggle btn 控制 
+
+            // 練習二
+            // p tag click hide
+
+        });
+
+    </script>
+</body>
+
+</html>
