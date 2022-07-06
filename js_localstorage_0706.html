@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-localstorage_notes</title>
+</head>
+
+<body>
+    <!--code存放在web瀏覽器的空間,不會因為重整畫面或者關閉瀏覽器而消失-->
+    <!--web storage-->
+    <!--web storage分為兩種-->
+    <!--1.window.sessionStorage:頁面不關就暫存-->
+    <!--2.window.localStorage:永久保存-->
+
+    <!--web storage method-->
+    <!--Storage.setItem('key','value')-->
+    <!--Storage.getItem('key')-->
+    <!--Storage.key()-->
+    <!--Storage.removeItem()-->
+    <!--Storage.clear()-->
+
+    <!--可以讓資料在網頁中與server端之間做傳輸-->
+    <!--有兩種方法-->
+    <!--1.JSON.stringify():資料轉為JSON格式字串-->
+    <!--2.JSON.parse(myJSON):資料由JSON格式字串轉回原本資料內容&型別-->
+
+    <!--EX-->
+    <script>
+
+        let string = 'TZUtzu'
+        let number = 812244;
+        let array = ['tzu', 0207, true]; //這裡是 let array = [string | number | boolean];
+
+        localStorage.setItem('item',JSON.stringify(string));
+        localStorage.setItem('item1',JSON.stringify(number));
+        localStorage.setItem('item2',JSON.stringify(array));
+
+        console.log(JSON.parse(localStorage.getItem('item')));
+        console.log(JSON.parse(localStorage.getItem('item1')));
+        console.log(JSON.parse(localStorage.getItem('item2')));
+        
+    </script>
+
+    
+</body>
+</html>

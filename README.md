@@ -18,5 +18,7 @@
     <li><a href="./js_0630_jquery_pra01.html">jQuery_slidetoggle3</a></li>
     <li><a href="./js_0630_jquery_pra02.html">jQuery_slidetoggle4</a></li>
     <li><a href="./js_0630_jquery_effects_sliding.html">jQuery_pink_slidetoggle</a></li>
-    <li><a href="./js_0630_jquery_buttonpra.html">jQuery_btn_practice</a></li>
+    <li><a href="./js_0706__countdown_basic.html">jQuery_countdown_practice1</a></li>
+    <li><a href="./js_0706_countdownup.html">jQuery_countdown_practice2</a></li>
+    <li><a href="./js_localstorage_0706.html">jQuery_localstorage_notes</a></li>
 </ul>
