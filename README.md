@@ -24,5 +24,5 @@
     <li><a href="./jq__070702.html">jQuery_TraversingPart2</a></li>
     <li><a href="./jq__070703.html">jQuery_TraversingPart3</a></li>
     <li><a href="./jq__traversing_note.html">jQuery_Traversing_notes</a></li>
-    <li><a href="./jq_0707_digital.html">jQuery_digital</a></li>
+    <li><a href="./jq_0707_digital.html">jQuery_digital(javascript)</a></li>
 </ul>
