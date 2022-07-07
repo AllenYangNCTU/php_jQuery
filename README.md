@@ -21,4 +21,8 @@
     <li><a href="./js_0706__countdown_basic.html">jQuery_countdown_practice1</a></li>
     <li><a href="./js_0706_countdownup.html">jQuery_countdown_practice2</a></li>
     <li><a href="./js_localstorage_0706.html">jQuery_localstorage_notes</a></li>
+    <li><a href="./jq__070702.html">jQuery__TraversingPart2</a></li>
+    <li><a href="./jq__070703.html">jQuery_TraversingPart3</a></li>
+    <li><a href="./jq__traversing_note.html">jQuery_Traversing_notes</a></li>
+    <li><a href="./jq_0707_digital.html">jQuery_digital</a></li>
 </ul>

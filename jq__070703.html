@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+            margin-right: 50px;
+            border-radius: 10px;
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .reset {
+            background-color: skyblue;
+        }
+
+        .red {
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- jQuery Traversing -->
+
+    <h3>Traversing 紅綠燈</h3>
+    <hr>
+    <div>
+        <button class="firstBtn" type="button">第一組</button>
+        <button class="green" type="button">綠燈</button>
+        <button class="reset" type="button">重置</button>
+        <button class="red" type="button">紅燈</button>
+        <button class="lastBtn" type="button">最後組</button>
+    </div>
+    <hr>
+
+    <table id="myTable">
+        <tr>
+            <th>id</th>
+            <th>姓名</th>
+            <th>電話</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>tzu</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>chun</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>liu</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Jenny</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Nana</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Lily</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Jennie</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Jennifer</td>
+            <td>0911-111-222-333</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Judy</td>
+            <td>0911-111-222-333</td>
+        </tr>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        //一開始
+        $(document).ready(function () {
+
+            // 練習一 紅綠燈
+            // green id 1 3 5 7 .... 
+            // red id 2 4 6 8 10 .... 
+            // reset all no color
+
+            // 練習二
+            // first => first red other 沒顏色
+            // last => last red other 沒顏色
+
+            function resetFun() {
+                myTable.find('tr').css('color','black');
+            }
+
+
+            //btn
+            const firstBtn = $('.firstBtn');
+            const lastBtn = $('.lastBtn');
+            const greenBtn = $('.green');
+            const redBtn = $('.red');
+            const resetBtn = $('.reset');
+            const myTable = $('#myTable');
+            // table childrend 非tr
+            // table find('tr')
+            const myTr = $('tr');
+
+            //console.log
+            console.log(myTable.find('tr'));
+
+            greenBtn.click(function () {
+                resetFun();
+                console.log('greenBtn ok');
+                console.log('children', table.children());
+                // myTr.odd().css('color', 'green');
+                myTable.find('tr').odd().css('color', 'green');
+
+            });
+            redBtn.click(function () {
+                resetFun();
+                console.log('redBtn ok');
+                // myTr.evne().css('color', 'red');
+                myTable.find('tr').even().not('tr:first').css('color', 'red');
+            });
+            resetBtn.click(function () {
+                resetFun();
+                console.log('resetBtn ok');
+            });
+
+            firstBtn.click(function () {
+                resetFun();
+                myTable.find('td').parent().first().css('color','red');
+            });
+
+            lastBtn.click(function () {
+                resetFun();
+                myTable.find('tr').last().css('color','red');
+            });
+
+            
+        });
+
+
+    </script>
+</body>
+
+</html>

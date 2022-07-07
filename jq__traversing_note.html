@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_traversingnote</title>
+</head>
+<body>
+
+
+    <!--jq Traversingnote-->
+    <!--jq Traversing在jq裡是篩選元素-->
+    <!--jq之前的選取元素叫做:selectors-->
+    <!--但在jq選取元素更進階的就會是篩選元素(traversing)-->
+    <!--jq-traversing可以幫助自己做過濾,查詢元素-->
+    <!--也就是說jqtraversing其實就是從某一個元素進一步去找跟他有關聯的元素-->
+    <!--filter會搭配class使用-->
+
+    <script>
+        //jq_traversing_有一個filtering
+
+        //jQuery可幫助我們方便把過濾出的目標元素取出
+
+        //ex:
+        //取得第index個元素(index從0開始)
+        //.eq(index)
+        
+        //假定要取得第n個元素
+        //$('P').eq(n); //這裡面的假定如果是第4個元素,就會eq(4);
+
+        //focus
+        //1.取得上一層父元素
+        //.parent([selector])
+
+        //2.取得全部的父元素集合 (祖先元素)
+        //.parents([selector])
+
+        //3.取得(僅)下一階層的所有子元素之集合 (不含 text nodes)
+        //.children([selector])
+
+        // 4.取得全部的子元素 (含 text nodes)
+        // 也可以用來取得 iframe 的 content document
+        //.contents()
+
+
+        //再舉一個例子:
+
+        //說明1:以老師上課做例子,將 li 的父元素 (<ul> 或 <ol>) 背景改為紅色
+        //$('li').parent().css('background-color', 'red');
+
+        //說明2:把 li 的所有元素背景都改為紅色 (直到 <html> 元素)
+        //$('li').parents().css('background-color', 'red');
+
+        //說明3:把 li 的所有 <p> 祖先元素背景都改為紅色
+        //$('li').parents('p').css('background-color', 'red');
+
+        //以此類推
+        //說明4:有 .selected class 的 div 所有子元素顏色改為藍色;
+        //$('div').children('.selected').css('color', 'blue');
+
+        //jq-traversing 
+        //往同一層找
+        //next /prev /first /index eq(0);
+        //==============大致會是這樣================
+        //const obj1 = $('li').first();
+        //const obj2 = $('li').first().next();
+        //const obj3 = $('li').first().next().next();
+        //const obj4 = $('li').eq(3);
+        //const obj5 = $('li').last().prev();
+        //const obj6 = $('li').last();
+
+        //obj1.css('color','blue');
+        //obj2.css('color','red');
+        //obj3.css('color','green');
+        //obj4.css('color','brown');
+        //obj4.css('color','grey');
+        //obj5.css('color','pink');
+
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>
